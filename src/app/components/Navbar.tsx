@@ -42,13 +42,13 @@ const NavLink = (props: Props) => {
 export default function Nav() {
     const Links = ['Dashboard', 'Projects', 'Team']
   const { colorMode, toggleColorMode } = useColorMode()
-  const { isOpen, onOpen, onClose } = useDisclosure()
+
   return (
-    <Container mt={2} maxW={'3xl'}>
+    <Container mt={2} maxW={'2xl'}>
     <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
       
           <HStack spacing={8} alignItems={'center'}>
-            <Box>Evan Gordon</Box>
+            <Box><Link href='/'>Evan Gordon</Link></Box>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
             <Link href='blog'>
                 Blog

@@ -4,7 +4,7 @@ import './globals.css'
 import { Providers } from './providers'
 
 import { Box } from '@chakra-ui/react'
-import Nav from '../../components/Navbar'
+import Nav from './components/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
