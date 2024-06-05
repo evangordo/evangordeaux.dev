@@ -11,7 +11,8 @@ import {
     Kbd,
     IconProps,
     Icon,
-    useBreakpointValue
+    useBreakpointValue,
+    useColorModeValue
 } from '@chakra-ui/react'
 
 
@@ -43,17 +44,35 @@ export default function About() {
       <Box position={'relative'}>
   <Stack>
     <Flex>
+      
     <Image objectFit={'cover'} boxSize={24}rounded={"full"}src={'https://mentorsclub.s3.eu-north-1.amazonaws.com/f39272a4-1dca-4d3f-a482-67b9e11b771e-profiler.png'}/>
     <Heading ml={5} mt={7}textAlign={'center'}fontSize={'xl'}>
         Hey, I'm Evan, welcome to my portfolio!
     </Heading>
  
     </Flex>
+    {/* <Box zIndex="1" width="100%" position="absolute" height="100%">
+            <Box
+              bgGradient={useColorModeValue(
+                'radial(orange.600 1px, transparent 1px)',
+                'radial(orange.300 1px, transparent 1px)',
+              )}
+              backgroundSize="20px 20px"
+              opacity="0.4"
+              height="100%"
+            />
+          </Box> */}
+ 
     <Text mt={4} fontSize={'xl'}>I'm a frontend developer. My expertise lies in <Kbd borderColor={'blue.400'}>React</Kbd> and <Kbd borderColor={'white'}>Next.js</Kbd>.</Text>
     <Text mt={4} fontSize={'xl'}>Here to showcase my work, interestes, as well my learnings along the way in the hopes of helping others.</Text>
+    <Text mt={4} fontSize={'xl'}>My skilssss carousel</Text>
+
+MY SKILS
   </Stack>
   {/* <Blur position={'absolute'} top={-10} right={30} style={{ filter: 'blur(70px)' }}/> */}
   </Box>
+  
+  
 
  </Container>
   )

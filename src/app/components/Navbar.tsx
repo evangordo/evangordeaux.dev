@@ -15,8 +15,10 @@ import {
 } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import Link from 'next/link'
+import { FaXTwitter, FaGithub, FaLinkedinIn } from "react-icons/fa6";
 
 interface Props {
+
   children: React.ReactNode
 }
 
@@ -45,7 +47,7 @@ export default function Nav() {
 
   return (
     <Container mt={2} maxW={'2xl'}>
-    <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+    <Flex h={16} alignItems={'center'}  justifyContent={'space-between'}>
       
           <HStack spacing={8} alignItems={'center'}>
             <Box><Link href='/'>Evan Gordon</Link></Box>
@@ -59,6 +61,16 @@ export default function Nav() {
             </HStack>
           </HStack>
         <Stack direction={'row'} spacing={7} ml={7}>
+          <Box mt={3}>
+       < FaXTwitter/>
+       </Box>
+       <Box mt={3}>
+       < FaGithub/>
+       </Box>
+       <Box mt={3}>
+       <FaLinkedinIn/>
+       </Box>
+     
           <Button onClick={toggleColorMode}>
             {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
           </Button>
