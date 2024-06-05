@@ -22,10 +22,11 @@ export default function RootLayout({
     <html lang='en'>
       <body>
         <Providers>
+     
     <Nav/>
          
             {children}
-        
+    
 
         </Providers>
       </body>

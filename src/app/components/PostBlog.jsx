@@ -1,6 +1,6 @@
 "use client";
 
-import { addBlog } from "../../../lib/actions.js";
+import { addBlog } from "../lib/actions.js";
 
 import { useFormState } from "react-dom";
 
