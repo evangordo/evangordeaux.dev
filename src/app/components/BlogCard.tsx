@@ -19,7 +19,7 @@ export default function BlogCard() {
   return (
     <Center py={6}>
       <Box
-        maxW={'2xl'}
+        maxW={'3xl'}
         w={'full'}
         bg={useColorModeValue('white', 'gray.900')}
         boxShadow={'2xl'}

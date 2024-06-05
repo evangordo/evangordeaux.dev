@@ -40,7 +40,7 @@ import React from 'react'
   
 export default function About() {
   return (
- <Container mt={5}maxW={'2xl'} >
+ <Container mt={5}maxW={'3xl'} >
       <Box position={'relative'}>
   <Stack>
     <Flex>
@@ -65,9 +65,7 @@ export default function About() {
  
     <Text mt={4} fontSize={'xl'}>I'm a frontend developer. My expertise lies in <Kbd borderColor={'blue.400'}>React</Kbd> and <Kbd borderColor={'white'}>Next.js</Kbd>.</Text>
     <Text mt={4} fontSize={'xl'}>Here to showcase my work, interestes, as well my learnings along the way in the hopes of helping others.</Text>
-    <Text mt={4} fontSize={'xl'}>My skilssss carousel</Text>
-
-MY SKILS
+   
   </Stack>
   {/* <Blur position={'absolute'} top={-10} right={30} style={{ filter: 'blur(70px)' }}/> */}
   </Box>

@@ -1,7 +1,9 @@
-import { Heading } from "@chakra-ui/react";
+import { Container, Grid, Heading, SimpleGrid } from "@chakra-ui/react";
 import About from "./components/About";
 import BlogCard from "./components/BlogCard";
 import { scroll } from "framer-motion/dom";
+import Tools from "./components/Tools";
+import GridBox from "./components/Grid";
 
 
 export default function Home() {
@@ -14,13 +16,16 @@ export default function Home() {
   return (
     <>
 <About/>
-
+{/* <Tools/> */}
+<GridBox/>
+<Container maxW={'3xl'}>
+<SimpleGrid gap={4} columns={[1,1,2]}>
 <BlogCard/>
 <BlogCard/>
 <BlogCard/>
 <BlogCard/>
-<BlogCard/>
-<BlogCard/>
+</SimpleGrid>
+</Container>
 </>
   );
 }
