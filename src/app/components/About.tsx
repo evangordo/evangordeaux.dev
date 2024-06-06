@@ -47,7 +47,8 @@ export default function About() {
       
     <Image objectFit={'cover'} boxSize={24}rounded={"full"}src={'https://mentorsclub.s3.eu-north-1.amazonaws.com/f39272a4-1dca-4d3f-a482-67b9e11b771e-profiler.png'}/>
     <Heading ml={5} mt={7}textAlign={'center'}fontSize={'xl'}>
-        Hey, I'm Evan, welcome to my portfolio!
+        I'm Evan, welcome to my site 🤝
+
     </Heading>
  
     </Flex>

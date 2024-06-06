@@ -20,20 +20,20 @@ export default function GridBox() {
   >
     <GridItem  rowSpan={2} colSpan={1}  >
       <Box 
-      borderWidth='5px' borderRadius={'md'} height={'100%'}><Text>hi</Text>
+      borderWidth='5px'  borderRadius={'md'} height={'100%'}><Text>hi</Text>
       <TitleCard title='Education'/>
       </Box>
       </GridItem>
     <GridItem colSpan={2}  >
     <Box 
-      borderWidth='5px' borderRadius={'md'} height={'100%'}>
-        {/* <Flex> */}
-  {/* <EducationImage/> */}
-  <Heading  m={2}fontSize={'lg'}> Dublin City University,</Heading>
-  <Heading  m={2}fontSize={'lg'}> B.sc. Computing for Business, 2019 - 2023,</Heading>
-  <Heading m={2}fontSize={'lg'}> 1st class</Heading>
-  {/* </Flex> */}
+      borderWidth='5px' borderRadius={'md'} >
+    <Box bg='#13324d' >
+  <Heading color={'#fec802'}  p={2} fontSize={'lg'}> Dublin City University,</Heading>
+  <Heading ml={2}fontSize={'lg'}> B.Sc. Computing for Business, 2019 - 2023,</Heading>
+  <Heading p={2}fontSize={'lg'}> 1st class</Heading>
+
         <TitleCard title='Education'/>
+        </Box>
         </Box>
 </GridItem>
      
@@ -88,12 +88,3 @@ const TitleCard = ({title, showExternalLinkIcon = false }: TitleCardProp) => {
 
 
 
-
-const EducationImage = ()=> {
-  return(
-
-    <Box >
-      <Image alt='dcu'  borderRadius='sm'  boxSize={'32'} objectFit='cover'  src={dcu} />
-    </Box>
-  )
-}

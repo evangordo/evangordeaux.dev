@@ -21,7 +21,7 @@ export default function Tools() {
  
 
       
-        <Box mt={4} borderWidth='5px' borderRadius='lg'  >
+        <Box  borderWidth='5px' borderRadius='lg'  >
         < ChakraImagesCarousel/>
         </Box>
   
@@ -33,45 +33,54 @@ export default function Tools() {
 
 const ChakraImagesCarousel = () => {
   return (
-    <div>
-      <Box m={3} className="animate-slide-left-infinite group-hover:animation-pause" display="inline-block" w="max-content">
-        <Link href='https://react.dev/'>
-          <Image className="mx-4 inline h-16" src={react}alt="react" width={158} height={18} />
-        </Link>
-        <Link href='https://react.dev/'>
-          <Image className="mx-4 inline h-16" src={next} alt="next" width={158} height={18} />
-        </Link>
-        <Link href='https://react.dev/'>
-          <Image className="mx-4 inline h-16" src={typescript} alt="typeScript" width={158} height={18} />
-        </Link>
-        <Link href='https://react.dev/'>
-          <Image className="mx-4 inline h-16" src={chakra} alt="chakr" width={158} height={18} />
-        </Link>
-        <Link href='https://react.dev/'>
-          <Image className="mx-4 inline h-16" src={mongo} alt="mongo" width={'100%'} height={20} />
-        </Link>
+<>
+<Box
+bg='#b2b2b2'
+
+      className="logos group relative overflow-hidden whitespace-nowrap py-10"
+    >
+      <Box    m={3}className="animate-slide-left-infinite group-hover:animation-pause" display="inline-block" w="max-content">
+
+
+      <Image className="mx-4 inline h-16"  h={16} w={14} src={react} alt="Reform" />
+    
+      <Image className="mx-4 inline h-16"  h={16} w={14} src={typescript} alt="Reform" />
+       
+        
+         <img className="mx-4 inline h-16" src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_light_background.png" alt="SavvyCal" />
+      
+       
+          <img className="mx-4 inline h-16" src="https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png" alt="SavvyCal" />
+       
+        
+          <Image className="mx-4 inline h-16"   h={16} w={14} src={chakra} alt="SavvyCal" />
+       
+          <Image className="mx-4 inline h-16"  h={16} w={14} src={mongo} alt="Reform" />
+
       </Box>
 
-      {/* <Box m={3} className="animate-slide-left-infinite group-hover:animation-pause" display="inline-block" w="max-content">
-        <Link href='https://react.dev/'>
+      <Box className="animate-slide-left-infinite group-hover:animation-pause" display="inline-block" w="max-content">
+    
+      <Image className="mx-4 inline h-16" h={16} w={14} src={react} alt="Reform" />
+      <Image className="mx-4 inline h-16"   h={16} w={14} src={typescript} alt="Reform" />
+    
+        
+        
+    
+           <img className="mx-4 inline h-16"  src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_light_background.png" alt="SavvyCal" />
+        
+         
+           <img className="mx-4 inline h-16" src="https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png" alt="SavvyCal" />
+        
+         
+          <Image className="mx-4 inline h-16"  h={16} w={14} src={chakra} alt="SavvyCal" />
        
-        </Link>
-        <Link href='https://react.dev/'>
-          <Image className="mx-4 inline h-16" src="/assets/next.png" alt="Next.js" width={158} height={48} />
-        </Link>
-        <Link href='https://react.dev/'>
-          <Image className="mx-4 inline h-16" src="/assets/typescript.png" alt="TypeScript" width={158} height={48} />
-        </Link>
-        <Link href='https://react.dev/'>
-          <Image className="mx-4 inline h-16" src="/assets/chakra.png" alt="Chakra UI" width={158} height={48} />
-        </Link>
-        <Link href='https://react.dev/'>
-          <Image className="mx-4 inline h-16" src="/assets/prisma.png" alt="Prisma" width={158} height={48} />
-        </Link>
-      </Box> */}
-
-      <TitleCard title="Experience" />
-    </div>
+          <Image className="mx-4 inline h-16"  h={16} w={14} src={mongo} alt="Reform" />
+      </Box>
+      <TitleCard title="Stack I use" />
+    </Box>
+    </>
+ 
   );
 };
 
@@ -97,7 +106,7 @@ const TitleCard = ({title}: TitleCardProp) => {
         letterSpacing='wide'
         fontSize='xs'
         textTransform='uppercase'
-    // ml={-6}
+ 
         m={2}
       >
      {title}
