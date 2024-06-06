@@ -4,6 +4,7 @@ import BlogCard from "./components/BlogCard";
 import { scroll } from "framer-motion/dom";
 import Tools from "./components/Tools";
 import GridBox from "./components/Grid";
+import Footer from "./components/Footer";
 
 
 export default function Home() {
@@ -18,7 +19,7 @@ export default function Home() {
 <About/>
 {/* <Tools/> */}
 <GridBox/>
-<Container maxW={'3xl'}>
+<Container mt={16} maxW={'3xl'}>
 <SimpleGrid gap={4} columns={[1,1,2]}>
 <BlogCard/>
 <BlogCard/>
@@ -26,6 +27,8 @@ export default function Home() {
 <BlogCard/>
 </SimpleGrid>
 </Container>
+<Footer/>
+
 </>
   );
 }

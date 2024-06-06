@@ -1,7 +1,13 @@
+'use client'
 import React from 'react'
 
-import { Grid, GridItem, Container , Box, Text} from '@chakra-ui/react'
+import { Grid, GridItem, Container , Box, Text, Flex, Heading} from '@chakra-ui/react'
 import Tools from './Tools'
+// import Image from 'next/image'
+import Image from './Image'
+import rakeoff from '../assets/rakeoff.png'
+import dcu from '../assets/dcu.png'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 export default function GridBox() {
   return (
@@ -14,21 +20,80 @@ export default function GridBox() {
   >
     <GridItem  rowSpan={2} colSpan={1}  >
       <Box 
-      borderWidth='5px' borderRadius={'md'} height={'100%'}><Text>hi</Text></Box>
+      borderWidth='5px' borderRadius={'md'} height={'100%'}><Text>hi</Text>
+      <TitleCard title='Education'/>
+      </Box>
       </GridItem>
     <GridItem colSpan={2}  >
     <Box 
-      borderWidth='5px' borderRadius={'md'} height={'100%'}/>
+      borderWidth='5px' borderRadius={'md'} height={'100%'}>
+        {/* <Flex> */}
+  {/* <EducationImage/> */}
+  <Heading  m={2}fontSize={'lg'}> Dublin City University,</Heading>
+  <Heading  m={2}fontSize={'lg'}> B.sc. Computing for Business, 2019 - 2023,</Heading>
+  <Heading m={2}fontSize={'lg'}> 1st class</Heading>
+  {/* </Flex> */}
+        <TitleCard title='Education'/>
+        </Box>
 </GridItem>
      
     <GridItem colSpan={2} >
     <Box 
-      borderWidth='5px' borderRadius={'md'} height={'100%'}/>
+      borderWidth='5px' borderRadius={'md'}>
+ 
+<Image alt='work' objectFit='cover' src={rakeoff}/>
+<TitleCard title='Experience' showExternalLinkIcon={true}/>
+
+</Box>
       </GridItem>
     <GridItem colSpan={4} >
       <Tools/>
       </GridItem>
   </Grid>
   </Container>
+  )
+}
+
+
+
+interface TitleCardProp{
+  title: string
+  showExternalLinkIcon?: boolean;
+}
+
+const TitleCard = ({title, showExternalLinkIcon = false }: TitleCardProp) => {
+  return (
+    <Box bg='#2c313d' >
+    <Flex alignItems={'center'} justifyContent={'space-between'} >
+   
+      <Box
+      bg='#2c313d'
+      style={{
+        textShadow:
+          " 20px grey, 0 0 30px grey, 0 0 40px grey, 0 0 55px grey, 0 0 75px grey",
+      }}
+        fontWeight='semibold'
+        letterSpacing='wide'
+        fontSize='xs'
+        textTransform='uppercase'
+       m={2}
+      >
+     {title}
+      </Box>
+      {showExternalLinkIcon && <ExternalLinkIcon m={2} />}
+    </Flex>
+    </Box>
+  )
+}
+
+
+
+
+const EducationImage = ()=> {
+  return(
+
+    <Box >
+      <Image alt='dcu'  borderRadius='sm'  boxSize={'32'} objectFit='cover'  src={dcu} />
+    </Box>
   )
 }

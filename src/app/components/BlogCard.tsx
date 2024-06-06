@@ -25,7 +25,9 @@ export default function BlogCard() {
         boxShadow={'2xl'}
         rounded={'md'}
         p={6}
-        overflow={'hidden'}>
+        overflow={'hidden'}
+        borderWidth={'5px'}
+        >
    
      
    <Flex mb={1}  alignItems={'center'} justifyContent={'space-between'}>
