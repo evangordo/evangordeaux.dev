@@ -52,7 +52,7 @@ export default function About() {
               }
             />
             <Heading ml={5} mt={7} textAlign={'center'} fontSize={'xl'}>
-              I'm Evan, and welcome to my site 🤝
+              I'm Evan, and welcome to my site
             </Heading>
           </Flex>
   
@@ -61,7 +61,7 @@ export default function About() {
             and <Kbd borderColor={'white'}>Next.js</Kbd>.
           </Text>
           <Text mt={4} fontSize={'xl'}>
-            Here to showcase my work, interestes, as well my learnings along the way in the hopes of
+            Here to showcase my work, as well my learnings along the way in the hopes of
             helping others.
           </Text>
         </Stack>

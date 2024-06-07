@@ -6,17 +6,18 @@ import Tools from './Tools';
 // import Image from 'next/image'
 import Image from './Image';
 import rakeoff from '../assets/rakeoff.png';
-import dcu from '../assets/dcu.png';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 export default function GridBox() {
   return (
     <Container mt={4} maxW={'3xl'}>
       <Grid h="300px" templateRows="repeat(2, 1fr)" templateColumns="repeat(5, 1fr)" gap={4}>
-        <GridItem rowSpan={2} colSpan={1}>
-          <Box borderWidth="5px" borderRadius={'md'} height={'100%'}>
-            <Text>hi</Text>
-            <TitleCard title="Education" />
+        <GridItem  rowSpan={2} colSpan={1}>
+          <Box borderWidth="5px"  borderRadius={'md'} height={'100%'}>
+            <Box bg='#f5f5ee'>
+            <Text color={'black'} p={1}>I try to improve everyday, with views on things from a beginner's perspective. Outside of development, I'm passionate about fitness. 🏃‍♂️</Text>
+            <TitleCard title="More" />
+            </Box>
           </Box>
         </GridItem>
         <GridItem colSpan={2}>
