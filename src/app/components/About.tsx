@@ -1,22 +1,21 @@
-'use client'
+'use client';
 import {
-    Avatar,
-    Box,
-    Container,
-    Heading,
-    Stack,
-    Image,
-    Flex,
-    Text,
-    Kbd,
-    IconProps,
-    Icon,
-    useBreakpointValue,
-    useColorModeValue
-} from '@chakra-ui/react'
+  Avatar,
+  Box,
+  Container,
+  Heading,
+  Stack,
+  Image,
+  Flex,
+  Text,
+  Kbd,
+  IconProps,
+  Icon,
+  useBreakpointValue,
+  useColorModeValue,
+} from '@chakra-ui/react';
 
-
-import React from 'react'
+import React from 'react';
 // const Blur = (props: IconProps) => {
 //     return (
 //       <Icon
@@ -31,48 +30,43 @@ import React from 'react'
 //         <circle cx="1" cy="106" r="139" fill="#778899" />
 //         <circle cy="1" r="3" fill="#778899" />
 //         <circle cx="1.5" cy="189.5" r="101.5" fill="#778899" />
-       
+
 //         <circle cx="70.5" cy="458.5" r="101.5" fill="#708090" />
 //         <circle cx="426.5" cy="-0.5" r="101.5" fill="#778899" />
 //       </Icon>
 //     )
 //   }
-  
+
 export default function About() {
   return (
- <Container mt={5}maxW={'3xl'} >
+    <Container mt={5} maxW={'3xl'}>
       <Box position={'relative'}>
-  <Stack>
-    <Flex>
-      
-    <Image objectFit={'cover'} boxSize={24}rounded={"full"}src={'https://mentorsclub.s3.eu-north-1.amazonaws.com/f39272a4-1dca-4d3f-a482-67b9e11b771e-profiler.png'}/>
-    <Heading ml={5} mt={7}textAlign={'center'}fontSize={'xl'}>
-        I'm Evan, welcome to my site 🤝
-
-    </Heading>
- 
-    </Flex>
-    {/* <Box zIndex="1" width="100%" position="absolute" height="100%">
-            <Box
-              bgGradient={useColorModeValue(
-                'radial(orange.600 1px, transparent 1px)',
-                'radial(orange.300 1px, transparent 1px)',
-              )}
-              backgroundSize="20px 20px"
-              opacity="0.4"
-              height="100%"
+        <Stack>
+          <Flex>
+            <Image
+              objectFit={'cover'}
+              boxSize={24}
+              rounded={'full'}
+              src={
+                'https://mentorsclub.s3.eu-north-1.amazonaws.com/f39272a4-1dca-4d3f-a482-67b9e11b771e-profiler.png'
+              }
             />
-          </Box> */}
- 
-    <Text mt={4} fontSize={'xl'}>I'm a frontend developer. My expertise lies in <Kbd borderColor={'blue.400'}>React</Kbd> and <Kbd borderColor={'white'}>Next.js</Kbd>.</Text>
-    <Text mt={4} fontSize={'xl'}>Here to showcase my work, interestes, as well my learnings along the way in the hopes of helping others.</Text>
+            <Heading ml={5} mt={7} textAlign={'center'} fontSize={'xl'}>
+              I'm Evan, and welcome to my site 🤝
+            </Heading>
+          </Flex>
+  
+          <Text mt={4} fontSize={'xl'}>
+            I'm a frontend developer. My expertise lies in <Kbd borderColor={'blue.400'}>React</Kbd>{' '}
+            and <Kbd borderColor={'white'}>Next.js</Kbd>.
+          </Text>
+          <Text mt={4} fontSize={'xl'}>
+            Here to showcase my work, interestes, as well my learnings along the way in the hopes of
+            helping others.
+          </Text>
+        </Stack>
    
-  </Stack>
-  {/* <Blur position={'absolute'} top={-10} right={30} style={{ filter: 'blur(70px)' }}/> */}
-  </Box>
-  
-  
-
- </Container>
-  )
+      </Box>
+    </Container>
+  );
 }

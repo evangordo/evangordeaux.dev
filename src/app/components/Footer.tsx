@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import {
   Box,
@@ -9,18 +9,18 @@ import {
   Text,
   useColorModeValue,
   VisuallyHidden,
-} from '@chakra-ui/react'
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
-import { ReactNode } from 'react'
+} from '@chakra-ui/react';
+import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { ReactNode } from 'react';
 
 const SocialButton = ({
   children,
   label,
   href,
 }: {
-  children: ReactNode
-  label: string
-  href: string
+  children: ReactNode;
+  label: string;
+  href: string;
 }) => {
   return (
     <chakra.button
@@ -37,18 +37,18 @@ const SocialButton = ({
       transition={'background 0.3s ease'}
       _hover={{
         bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
-      }}>
+      }}
+    >
       <VisuallyHidden>{label}</VisuallyHidden>
       {children}
     </chakra.button>
-  )
-}
+  );
+};
 
 export default function Footer() {
-
   return (
-<>
-  <Divider/>
+    <>
+      <Divider />
       <Container
         as={Stack}
         maxW={'3xl'}
@@ -56,7 +56,8 @@ export default function Footer() {
         direction={{ base: 'column', md: 'row' }}
         spacing={4}
         justify={{ base: 'center', md: 'space-between' }}
-        align={{ base: 'center', md: 'center' }}>
+        align={{ base: 'center', md: 'center' }}
+      >
         <Text>Evan Gordon</Text>
         <Stack direction={'row'} spacing={6}>
           <SocialButton label={'Twitter'} href={'#'}>
@@ -70,6 +71,6 @@ export default function Footer() {
           </SocialButton>
         </Stack>
       </Container>
-   </>
-  )
+    </>
+  );
 }

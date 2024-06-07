@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { addBlog } from "../lib/actions.js";
+import { addBlog } from '../lib/actions.js';
 
-import { useFormState } from "react-dom";
+import { useFormState } from 'react-dom';
 
 const PostBlog = () => {
   const [state, formAction] = useFormState(addBlog, undefined);
