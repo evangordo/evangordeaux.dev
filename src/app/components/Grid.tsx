@@ -41,9 +41,9 @@ export default function GridBox() {
         </GridItem>
         <GridItem rowSpan={2} colSpan={1}  >
           <Box borderWidth="5px"  borderRadius={'md'} height={'100%'}>
-            <Box bg='#f5f5ee'>
-            <Text color={'black'} p={1}>I try to improve everyday, with views on things from a beginner's perspective. Outside of development, I'm passionate about
-          sports & fitness. 🏃‍♂️</Text>
+            <Box bgGradient='linear(to-b, #4299E1, #1A365D)'>
+            <Text color={'white'} p={1}>Learning and improving daily with takes on things from a beginner's perspective. Outside of development, I'm keen on
+         my sports & fitness. 🏃‍♂️ 🏉 🎾</Text>
             <TitleCard title="More" />
             </Box>
           </Box>
