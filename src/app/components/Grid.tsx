@@ -12,14 +12,6 @@ export default function GridBox() {
   return (
     <Container mt={4} maxW={'3xl'}>
       <Grid h="300px" templateRows="repeat(2, 1fr)" templateColumns="repeat(5, 1fr)" gap={4}>
-        <GridItem  rowSpan={2} colSpan={1}>
-          <Box borderWidth="5px"  borderRadius={'md'} height={'100%'}>
-            <Box bg='#f5f5ee'>
-            <Text color={'black'} p={1}>I try to improve everyday, with views on things from a beginner's perspective. Outside of development, I'm passionate about fitness. 🏃‍♂️</Text>
-            <TitleCard title="More" />
-            </Box>
-          </Box>
-        </GridItem>
         <GridItem colSpan={2}>
           <Box borderWidth="5px" borderRadius={'md'}>
             <Box bg="#13324d">
@@ -47,9 +39,19 @@ export default function GridBox() {
             <TitleCard title="Experience" showExternalLinkIcon={true} />
           </Box>
         </GridItem>
+        <GridItem rowSpan={2} colSpan={1}  >
+          <Box borderWidth="5px"  borderRadius={'md'} height={'100%'}>
+            <Box bg='#f5f5ee'>
+            <Text color={'black'} p={1}>I try to improve everyday, with views on things from a beginner's perspective. Outside of development, I'm passionate about
+          sports & fitness. 🏃‍♂️</Text>
+            <TitleCard title="More" />
+            </Box>
+          </Box>
+        </GridItem>
         <GridItem colSpan={4}>
           <Tools />
         </GridItem>
+       
       </Grid>
     </Container>
   );
