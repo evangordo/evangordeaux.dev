@@ -7,13 +7,14 @@ import Tools from './Tools';
 import Image from './Image';
 import rakeoff from '../assets/rakeoff.png';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
+import Link from 'next/link';
 
 export default function GridBox() {
   return (
     <Container mt={4} maxW={'3xl'}>
       <Grid h="300px" templateRows="repeat(2, 1fr)" templateColumns="repeat(5, 1fr)" gap={4}>
         <GridItem colSpan={2}>
-          <Box borderWidth="5px" borderRadius={'md'}>
+          <Box boxShadow='dark-lg' borderWidth="5px" borderRadius={'md'}>
             <Box bg="#13324d">
               <Heading color={'#fec802'} p={2} fontSize={'lg'}>
                 {' '}
@@ -33,14 +34,16 @@ export default function GridBox() {
           </Box>
         </GridItem>
 
-        <GridItem colSpan={2}>
-          <Box borderWidth="5px" borderRadius={'md'}>
+      <GridItem colSpan={2}>
+      <Link href='/experience'> 
+          <Box boxShadow='dark-lg'  borderWidth="5px" borderRadius={'md'}>
             <Image alt="work" objectFit="cover" src={rakeoff} />
             <TitleCard title="Experience" showExternalLinkIcon={true} />
           </Box>
+          </Link>
         </GridItem>
         <GridItem rowSpan={2} colSpan={1}  >
-          <Box borderWidth="5px"  borderRadius={'md'} height={'100%'}>
+          <Box boxShadow='dark-lg'  borderWidth="5px"  borderRadius={'md'} height={'100%'}>
             <Box bgGradient='linear(to-b, #4299E1, #1A365D)'>
             <Text color={'white'} p={1}>Learning and improving daily with takes on things from a beginner's perspective. Outside of development, I'm keen on
          my sports & fitness. 🏃‍♂️ 🏉 🎾</Text>

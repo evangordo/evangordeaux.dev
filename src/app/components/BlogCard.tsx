@@ -16,10 +16,11 @@ export default function BlogCard() {
   return (
     <Center py={6}>
       <Box
+      boxShadow='dark-lg' 
         maxW={'3xl'}
         w={'full'}
         bg={useColorModeValue('white', 'gray.900')}
-        boxShadow={'2xl'}
+       
         rounded={'md'}
         p={6}
         overflow={'hidden'}

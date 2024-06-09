@@ -9,7 +9,7 @@ import Image from './Image';
 
 export default function Tools() {
   return (
-    <Box borderWidth="5px" borderRadius="lg">
+    <Box boxShadow='dark-lg'  borderWidth="5px" borderRadius="lg">
       <ChakraImagesCarousel />
     </Box>
   );
