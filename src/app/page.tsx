@@ -5,6 +5,7 @@ import { scroll } from 'framer-motion/dom';
 import Tools from './components/Tools';
 import GridBox from './components/Grid';
 import Footer from './components/Footer';
+import MDX from './content/page.mdx'
 
 export default function Home() {
   //   const progressWheel = document.querySelector(".progress");
@@ -23,7 +24,9 @@ export default function Home() {
           <BlogCard />
           <BlogCard />
           <BlogCard />
+          
         </SimpleGrid>
+        <MDX/>
       </Container>
       <Footer />
     </>

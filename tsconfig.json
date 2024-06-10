@@ -30,6 +30,6 @@
     "src/app/lib/auth.config.js",
     "src/app/lib/actions.js",
     "src/app/lib/utils.js"
-  ],
+, "next.config.js"  ],
   "exclude": ["node_modules"]
 }
