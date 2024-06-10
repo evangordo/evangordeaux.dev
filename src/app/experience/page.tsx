@@ -1,8 +1,7 @@
 import { Box, Container, Divider, Flex, Heading,Text,
-  List,
+  
   ListItem,
-  ListIcon,
-  OrderedList,
+
   UnorderedList,
 } from '@chakra-ui/react'
 import React from 'react'

@@ -1,4 +1,5 @@
 'use client';
+import React from 'react'
 import Image from 'next/image';
 import {
   Box,
@@ -12,7 +13,16 @@ import {
 } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 
-export default function BlogCard() {
+
+interface BlogCardProps{
+  heading: string,
+  description: string,
+date: string
+
+
+}
+
+export default function BlogCard({heading, description, date}: BlogCardProps) {
   return (
     <Center py={6}>
       <Box
@@ -47,17 +57,15 @@ export default function BlogCard() {
           fontSize={'2xl'}
           fontFamily={'body'}
         >
-          Boost your conversion rate
+        {heading}
         </Heading>
         <Text color={'gray.500'}>
-          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-          invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-          accusam et justo duo dolores et ea rebum.
+  {description}
         </Text>
 
         <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
           <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-            <Text color={'gray.500'}>Feb 08, 2021 </Text>
+            <Text color={'gray.500'}>{date} </Text>
           </Stack>
         </Stack>
       </Box>

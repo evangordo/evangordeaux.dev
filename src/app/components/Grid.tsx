@@ -29,7 +29,7 @@ export default function GridBox() {
                 1st class
               </Heading>
 
-              <TitleCard title="Education" />
+              <TitleCard m={2} title="Education" />
             </Box>
           </Box>
         </GridItem>
@@ -38,7 +38,7 @@ export default function GridBox() {
       <Link href='/experience'> 
           <Box boxShadow='dark-lg'  borderWidth="5px" borderRadius={'md'}>
             <Image alt="work" objectFit="cover" src={rakeoff} />
-            <TitleCard title="Experience" showExternalLinkIcon={true} />
+            <TitleCard  m={2}title="Experience" showExternalLinkIcon={true} />
           </Box>
           </Link>
         </GridItem>
@@ -47,7 +47,7 @@ export default function GridBox() {
             <Box bgGradient='linear(to-b, #4299E1, #1A365D)'>
             <Text color={'white'} p={1}>Learning and improving daily with takes on things from a beginner's perspective. Outside of development, I'm keen on
          my sports & fitness. 🏃‍♂️ 🏉 🎾</Text>
-            <TitleCard title="More" />
+            <TitleCard m={1.5}title="More" />
             </Box>
           </Box>
         </GridItem>
@@ -63,9 +63,10 @@ export default function GridBox() {
 interface TitleCardProp {
   title: string;
   showExternalLinkIcon?: boolean;
+  m: number
 }
 
-const TitleCard = ({ title, showExternalLinkIcon = false }: TitleCardProp) => {
+const TitleCard = ({ title,m, showExternalLinkIcon = false }: TitleCardProp) => {
   return (
     <Box bg="#3f444e">
       <Flex alignItems={'center'} justifyContent={'space-between'}>
@@ -76,7 +77,8 @@ const TitleCard = ({ title, showExternalLinkIcon = false }: TitleCardProp) => {
           letterSpacing="wide"
           fontSize="xs"
           textTransform="uppercase"
-          m={2}
+          m={m}
+        
         >
           {title}
         </Box>
