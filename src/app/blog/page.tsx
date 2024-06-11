@@ -1,5 +1,17 @@
+import { Container, Heading, SimpleGrid } from '@chakra-ui/react';
 import React from 'react';
+import { GetAllBlogs } from '../components/GetBlogs';
 
-export default function page() {
-  return <div>page</div>;
+export default function BlogPage() {
+
+
+  return <div>
+    <Container maxW={'3xl'}>
+<Heading>My blogs</Heading>
+<SimpleGrid columns={[1,1,2]}>
+<GetAllBlogs/>
+
+</SimpleGrid>
+    </Container>
+  </div>;
 }

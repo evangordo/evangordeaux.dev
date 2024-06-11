@@ -54,8 +54,8 @@ export default function Nav() {
             <Link href="/">Evan Gordon</Link>
           </Box>
           <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
-            <Link href="blog">Blog</Link>
-            <Link href="blog">About</Link>
+            <Link href="/blog">Blog</Link>
+            <Link href="/experience">Experience</Link>
           </HStack>
         </HStack>
         <Stack direction={'row'} spacing={7} ml={7}>
