@@ -17,7 +17,7 @@ import { ExternalLinkIcon } from '@chakra-ui/icons';
 interface BlogCardProps{
   heading: string,
   description: string,
-date: string
+  date: string
 
 
 }
@@ -59,13 +59,13 @@ export default function BlogCard({heading, description, date}: BlogCardProps) {
         >
         {heading}
         </Heading>
-        <Text color={'gray.500'}>
+        <Text mr={1} color={'gray.500'}>
   {description}
         </Text>
 
         <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
           <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-            <Text color={'gray.500'}>{date} </Text>
+            <Text color={'gray.500'}> {date} </Text>
           </Stack>
         </Stack>
       </Box>

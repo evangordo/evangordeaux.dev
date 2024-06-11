@@ -10,7 +10,7 @@ const blogs = await getBlogs()
      {blogs.map(blog => (
         <li key={blog.slug}>
             <Link href={`/${blog.slug}`}>
-<BlogCard heading={blog.heading} description={blog.description} date={blog.date} />
+<BlogCard heading={blog.title} description={blog.description} date={new Date(blog.date).toLocaleDateString()} />
 </Link>
         </li>
     ))}
