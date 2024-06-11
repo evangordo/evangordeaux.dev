@@ -9,7 +9,7 @@ const blogs = await getBlogs()
     <ol>
      {blogs.map(blog => (
         <li key={blog.slug}>
-            <Link href={`/${blog.slug}`}>
+            <Link href={`/blog/${blog.slug}`}>
 <BlogCard heading={blog.title} description={blog.description} date={new Date(blog.date).toLocaleDateString()} />
 </Link>
         </li>
