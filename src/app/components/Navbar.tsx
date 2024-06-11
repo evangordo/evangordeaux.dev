@@ -43,19 +43,27 @@ const NavLink = (props: Props) => {
 };
 
 export default function Nav() {
-  const Links = ['Dashboard', 'Projects', 'Team'];
   const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <Container mt={2} maxW={'3xl'}>
+       <Box 
+        borderWidth={'5px'}
+       bgGradient={[
+        'linear(to-t, #4A5568, #A0AEC0)',
+     
+      ]}
+      
+        borderRadius={'md'}>
       <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+       
         <HStack spacing={8} alignItems={'center'}>
-          <Box>
-            <Link href="/">Evan Gordon</Link>
+          <Box p={2}>
+            <Link href="/"><Text color={'white'}>Evan Gordon</Text></Link>
           </Box>
           <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
-            <Link href="/blog">Blog</Link>
-            <Link href="/experience">Experience</Link>
+            <Link href="/blog"><Text color={'white'}>Blog</Text></Link>
+            <Link href="/experience"><Text color={'white'}>Experience</Text></Link>
           </HStack>
         </HStack>
         <Stack direction={'row'} spacing={7} ml={7}>
@@ -68,6 +76,7 @@ export default function Nav() {
             }}
           >
             <Box
+             p={2}
               borderRadius={'sm'}
               boxShadow={
                 '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
@@ -81,7 +90,7 @@ export default function Nav() {
               }}
               mt={2}
             >
-              <FaXTwitter size={21} />
+              <FaXTwitter color={'white'} size={21} />
             </Box>
           </motion.div>
           <motion.div
@@ -93,6 +102,7 @@ export default function Nav() {
             }}
           >
             <Box
+             p={2}
               borderRadius={'sm'}
               boxShadow={
                 '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
@@ -106,7 +116,7 @@ export default function Nav() {
               }}
               mt={2}
             >
-              <FaGithub size={21} />
+              <FaGithub color={'white'}size={21} />
             </Box>
           </motion.div>
           <motion.div
@@ -118,6 +128,7 @@ export default function Nav() {
             }}
           >
             <Box
+            p={2}
               boxShadow={
                 '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
               }
@@ -130,15 +141,18 @@ export default function Nav() {
               }}
               mt={2}
             >
-              <FaLinkedinIn size={21} />
+              <FaLinkedinIn color={'white'} size={21} />
             </Box>
           </motion.div>
-
+<Box p={2}>
           <Button onClick={toggleColorMode}>
             {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
           </Button>
+          </Box>
         </Stack>
+    
       </Flex>
+      </Box>
     </Container>
   );
 }

@@ -9,7 +9,11 @@ import Image from './Image';
 
 export default function Tools() {
   return (
-    <Box boxShadow='dark-lg'  borderWidth="5px" borderRadius="lg">
+    <Box  bgGradient={[
+      'linear(to-t, #4A5568, #A0AEC0)',
+      // 'linear(to-t, blue.200, teal.500)',
+      // 'linear(to-b, #CBD5E0, RGBA(255, 255, 255, 0.24))',
+    ]} boxShadow='dark-lg'  borderWidth="5px" borderRadius="lg">
       <ChakraImagesCarousel />
     </Box>
   );
@@ -106,7 +110,11 @@ interface TitleCardProp {
 const TitleCard = ({ title }: TitleCardProp) => {
   return (
     <Box bg="#3f444e" >
-      <Box bg="#3f444e" display="flex">
+      <Box  bgGradient={[
+        'linear(to-t, #4A5568, #A0AEC0)',
+        // 'linear(to-t, blue.200, teal.500)',
+        // 'linear(to-b, #CBD5E0, RGBA(255, 255, 255, 0.24))',
+      ]} display="flex">
         <Box
        
          color={'white'}

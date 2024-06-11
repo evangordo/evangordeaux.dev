@@ -25,19 +25,30 @@ interface BlogCardProps{
 export default function BlogCard({heading, description, date}: BlogCardProps) {
   return (
     <Center py={6}>
+      <Box   boxShadow='dark-lg'
+        rounded={'md'}
+        borderWidth={'5px'}
+        bgGradient={[
+          'linear(to-t, #4A5568, #A0AEC0)',
+         
+        ]}
+      >
       <Box
-      boxShadow='dark-lg' 
+    bg='
+    #1a202c'
+    
         maxW={'3xl'}
         w={'full'}
-        bg={useColorModeValue('white', 'gray.900')}
        
-        rounded={'md'}
+       
+      
         p={6}
         overflow={'hidden'}
-        borderWidth={'5px'}
+      
       >
-        <Flex mb={1} alignItems={'center'} justifyContent={'space-between'}>
-          <Box>
+        <Flex mb={1}  alignItems={'center'} justifyContent={'space-between'}>
+          <Box bg='
+#1a202c'>
             <Text
               color={'blue.500'}
               textTransform={'uppercase'}
@@ -69,6 +80,7 @@ export default function BlogCard({heading, description, date}: BlogCardProps) {
           </Stack>
         </Stack>
       </Box>
+      </Box> 
     </Center>
   );
 }
