@@ -9,67 +9,109 @@ import {
   Text,
   useColorModeValue,
   VisuallyHidden,
+  Flex
 } from '@chakra-ui/react';
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
-import { ReactNode } from 'react';
 
-const SocialButton = ({
-  children,
-  label,
-  href,
-}: {
-  children: ReactNode;
-  label: string;
-  href: string;
-}) => {
-  return (
-    <chakra.button
-      bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-      rounded={'full'}
-      w={8}
-      h={8}
-      cursor={'pointer'}
-      as={'a'}
-      href={href}
-      display={'inline-flex'}
-      alignItems={'center'}
-      justifyContent={'center'}
-      transition={'background 0.3s ease'}
-      _hover={{
-        bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
-      }}
-    >
-      <VisuallyHidden>{label}</VisuallyHidden>
-      {children}
-    </chakra.button>
-  );
-};
+import { FaXTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa6';
+
+import { motion } from 'framer-motion';
 
 export default function Footer() {
   return (
     <>
-      <Divider />
+     
       <Container
         as={Stack}
         maxW={'3xl'}
         py={4}
-        direction={{ base: 'column', md: 'row' }}
-        spacing={4}
+      
         justify={{ base: 'center', md: 'space-between' }}
-        align={{ base: 'center', md: 'center' }}
+     
       >
+        <Divider />
+        {/* <Flex alignItems={'space-betweem'}> */}
         <Text>Evan Gordon</Text>
-        <Stack direction={'row'} spacing={6}>
-          <SocialButton label={'Twitter'} href={'#'}>
-            <FaTwitter />
-          </SocialButton>
-          <SocialButton label={'YouTube'} href={'#'}>
-            <FaYoutube />
-          </SocialButton>
-          <SocialButton label={'Instagram'} href={'#'}>
-            <FaInstagram />
-          </SocialButton>
+        <Stack direction={'row'} alignContent={'end'} spacing={7} >
+          <motion.div
+            whileHover={{ scale: 1.2 }}
+            whileTap={{
+              scale: 0.8,
+
+              borderRadius: '100%',
+            }}
+          >
+            <Box
+             p={2}
+              borderRadius={'sm'}
+              boxShadow={
+                '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
+              }
+              bg={'black'}
+              _hover={{
+                bg: 'black',
+              }}
+              _focus={{
+                bg: 'black',
+              }}
+              mt={2}
+            >
+              <FaXTwitter color={'white'} size={21} />
+            </Box>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.2 }}
+            whileTap={{
+              scale: 0.8,
+
+              borderRadius: '100%',
+            }}
+          >
+            <Box
+             p={2}
+              borderRadius={'sm'}
+              boxShadow={
+                '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
+              }
+              bg={'black'}
+              _hover={{
+                bg: 'black',
+              }}
+              _focus={{
+                bg: 'black',
+              }}
+              mt={2}
+            >
+              <FaGithub color={'white'}size={21} />
+            </Box>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.3 }}
+            whileTap={{
+              scale: 0.8,
+
+              borderRadius: '100%',
+            }}
+          >
+            <Box
+            p={2}
+              boxShadow={
+                '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
+              }
+              bg={'blue.400'}
+              _hover={{
+                bg: 'blue.500',
+              }}
+              _focus={{
+                bg: 'blue.500',
+              }}
+              mt={2}
+            >
+              <FaLinkedinIn color={'white'} size={21} />
+            </Box>
+          </motion.div>
+       
         </Stack>
+        {/* </Flex> */}
       </Container>
     </>
   );
