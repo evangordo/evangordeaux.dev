@@ -60,17 +60,17 @@ export default function BlogCard({heading, description, date}: BlogCardProps) {
             </Text>
           </Box>
           <Box>
-            <ExternalLinkIcon />
+            <ExternalLinkIcon  color={'white'}/>
           </Box>
         </Flex>
         <Heading
-          color={useColorModeValue('gray.700', 'white')}
+          color={'white'}
           fontSize={'2xl'}
           fontFamily={'body'}
         >
         {heading}
         </Heading>
-        <Text mr={1} color={'gray.500'}>
+        <Text mt={2} mr={1} color={'gray.500'}>
   {description}
         </Text>
 

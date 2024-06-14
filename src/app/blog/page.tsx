@@ -6,7 +6,7 @@ export default function BlogPage() {
 
 
   return <div>
-    <Container maxW={'3xl'}>
+    <Container mt={4}maxW={'3xl'}>
 <Heading>My blogs</Heading>
 <SimpleGrid columns={[1,1,2]}>
 <GetAllBlogs/>
