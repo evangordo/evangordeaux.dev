@@ -53,9 +53,9 @@ export default function GridBox() {
         'linear(to-t, #4A5568, #A0AEC0)',
        
       ]}boxShadow='dark-lg'  borderWidth="5px"  borderRadius={'md'} height={'100%'}>
-            <Box >
+            <Box bg='#1a202c ' >
             <Text color={'white'} p={1}>Learning and improving daily with takes on things from a beginner's perspective. Outside of development, I'm keen on
-         my sports & fitness. 🏃‍♂️ 🏉 🎾</Text>
+         my sports & fitness.</Text>
             <TitleCard m={1.5}title="More" />
             </Box>
           </Box>

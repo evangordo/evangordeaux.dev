@@ -1,6 +1,11 @@
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, Box } from '@chakra-ui/react';
 import { ReactNode } from 'react';
 
 export function Providers({ children }: { children: ReactNode }) {
-  return <ChakraProvider>{children}</ChakraProvider>;
+  return <ChakraProvider>
+       {/* <Box className='update'> */}
+    {children}
+    
+    {/* </Box> */}
+    </ChakraProvider>;
 }

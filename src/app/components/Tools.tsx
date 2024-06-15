@@ -11,8 +11,7 @@ export default function Tools() {
   return (
     <Box  bgGradient={[
       'linear(to-t, #4A5568, #A0AEC0)',
-      // 'linear(to-t, blue.200, teal.500)',
-      // 'linear(to-b, #CBD5E0, RGBA(255, 255, 255, 0.24))',
+   
     ]} boxShadow='dark-lg'  borderWidth="5px" borderRadius="lg">
       <ChakraImagesCarousel />
     </Box>
@@ -22,7 +21,7 @@ export default function Tools() {
 const ChakraImagesCarousel = () => {
   return (
     <>
-      <Box  className="logos group relative overflow-hidden whitespace-nowrap magicpattern ">
+      <Box  className="logos group relative overflow-hidden whitespace-nowrap update ">
         <Box
           m={3}
           className="group-hover:animation-pause animate-slide-left-infinite"
