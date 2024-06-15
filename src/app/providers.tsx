@@ -3,9 +3,9 @@ import { ReactNode } from 'react';
 
 export function Providers({ children }: { children: ReactNode }) {
   return <ChakraProvider>
-       {/* <Box className='update'> */}
+       <Box >
     {children}
     
-    {/* </Box> */}
+    </Box>
     </ChakraProvider>;
 }

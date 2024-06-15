@@ -44,6 +44,7 @@ export default function About() {
         <Stack>
           <Flex>
             <Image
+         className='imgbg'
               objectFit={'cover'}
               boxSize={24}
               rounded={'full'}
