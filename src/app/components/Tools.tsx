@@ -1,5 +1,5 @@
 'use client';
-import {  Box, Tooltip } from '@chakra-ui/react';
+import {  Box, Tooltip, useBreakpointValue } from '@chakra-ui/react';
 import react from '../assets/react.png';
 import typescript from '../assets/typescript.png';
 import chakra from '../assets/chakra.png';
@@ -8,6 +8,8 @@ import Image from './Image';
 
 
 export default function Tools() {
+
+
   return (
     <Box  bgGradient={[
       'linear(to-t, #4A5568, #A0AEC0)',
@@ -19,14 +21,20 @@ export default function Tools() {
 }
 
 const ChakraImagesCarousel = () => {
+  const isDesktop = useBreakpointValue({
+    base: false,
+    md: false,
+    lg: true,
+    xl: true,
+  });
   return (
     <>
-      <Box  className="logos group relative overflow-hidden whitespace-nowrap update ">
+      <Box  className="overflow-hidden whitespace-nowrap update ">
         <Box
           m={3}
           className="group-hover:animation-pause animate-slide-left-infinite"
           display="inline-block"
-          w="100%"
+          
          
         >
           <Tooltip label="React" aria-label='React'>
@@ -62,7 +70,7 @@ const ChakraImagesCarousel = () => {
           </Tooltip>
         </Box>
 
-        <Box
+      {isDesktop ?  <Box
           className="group-hover:animation-pause animate-slide-left-infinite"
           display="inline-block"
           w="max-content"
@@ -95,7 +103,7 @@ const ChakraImagesCarousel = () => {
           <Tooltip label="Mongodb" aria-label='Mongodb'>
           <Image className="mx-4 inline h-16" h={16} w={14} src={mongo} alt="mongodb" />
           </Tooltip>
-        </Box>
+        </Box> : undefined } 
         <TitleCard title="Stack I use" />
       </Box>
     </>
@@ -111,8 +119,7 @@ const TitleCard = ({ title }: TitleCardProp) => {
     <Box bg="#3f444e" >
       <Box  bgGradient={[
         'linear(to-t, #4A5568, #A0AEC0)',
-        // 'linear(to-t, blue.200, teal.500)',
-        // 'linear(to-b, #CBD5E0, RGBA(255, 255, 255, 0.24))',
+       
       ]} display="flex">
         <Box
        
