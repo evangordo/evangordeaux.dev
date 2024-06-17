@@ -1,19 +1,34 @@
-import { getBlogs, type Blog } from "../lib/data";
-import Link from "next/link";
-import BlogCard from "./BlogCard";
+'use client';
+import React, { Suspense } from 'react';
+import { getBlogPosts } from '../lib/data';
+import Link from 'next/link';
+import BlogCard from './BlogCard';
 
-export async function GetAllBlogs( ) {
 
-const blogs = await getBlogs()
+
+export function GetAllBlogs() {
+  let allBlogs = getBlogPosts();
+  console.log('getting blogs', allBlogs)
+
   return (
-    <ol>
-     {blogs.map(blog => (
-        <li key={blog.slug}>
-            <Link href={`/blog/${blog.slug}`}>
-<BlogCard heading={blog.title} description={blog.description} date={new Date(blog.date).toLocaleDateString()} />
-</Link>
-        </li>
-    ))}
-    </ol>
-  ); 
+    <>
+
+      {allBlogs.map((post: any) => (
+          <Link
+            key={post.slug}
+          
+            href={`/blog/${post.slug}`}
+          >
+       
+              <Suspense fallback={<p>loading...</p>}>
+                <BlogCard title={post.metadata.title} description={post.metadata.description} date={post.metadata.date}/>
+
+              
+              </Suspense>
+       
+          </Link>
+        ))}
+   
+    </>
+  );
 }

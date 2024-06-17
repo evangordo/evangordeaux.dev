@@ -15,12 +15,12 @@ export default function Home() {
       <About />
       <GridBox />
       <Container mt={4} maxW={'3xl'}>
-        <SimpleGrid gap={4} columns={[1, 1, 2]}>
+        {/* <SimpleGrid gap={4} columns={[1, 1, 2]}>
 
 
       
          <GetAllBlogs/>
-        </SimpleGrid>
+        </SimpleGrid> */}
       
       </Container>
       <Footer />

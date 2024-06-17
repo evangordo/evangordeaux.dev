@@ -14,14 +14,14 @@ import { ExternalLinkIcon } from '@chakra-ui/icons';
 
 
 interface BlogCardProps{
-  heading: string,
+  title: string,
   description: string,
   date: string
 
 
 }
 
-export default function BlogCard({heading, description, date}: BlogCardProps) {
+export default function BlogCard({title, description, date}: BlogCardProps) {
   return (
     <Center py={6}>
       <Box   boxShadow='dark-lg'
@@ -67,7 +67,7 @@ export default function BlogCard({heading, description, date}: BlogCardProps) {
           fontSize={'2xl'}
           fontFamily={'body'}
         >
-        {heading}
+        {title}
         </Heading>
         <Text mt={2} mr={1} color={'gray.500'}>
   {description}
