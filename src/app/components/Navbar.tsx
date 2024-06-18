@@ -1,5 +1,5 @@
 'use client';
-
+import React from 'react'
 import {
   Box,
   Flex,
@@ -9,13 +9,12 @@ import {
   HStack,
   Stack,
   useColorMode,
-  useColorModeValue,
   useDisclosure,
   useBreakpointValue,
   IconButton,
   Divider
 } from '@chakra-ui/react';
-import { ChevronDownIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
+import {  MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons'
 
 import Link from 'next/link';
@@ -23,15 +22,6 @@ import Link from 'next/link';
 import { FaXTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa6';
 
 import { motion } from 'framer-motion';
-interface Props {
-  children: React.ReactNode;
-}
-
-
-const Links = ['Dashboard', 'Projects', 'Team']
-
-
-
 
 export default function Nav() {
 
@@ -103,7 +93,7 @@ export default function Nav() {
              }}
              mt={2}
            >
-           <a href='https://x.com/EvanGordon9343' target="_blank">  <FaXTwitter color={'white'} size={21} /></a>
+           <a href='https://x.com/EvanGordon9343' rel="noreferrer"  target="_blank">  <FaXTwitter color={'white'} size={21} /></a>
            </Box>
          </motion.div>
          <motion.div
@@ -129,7 +119,7 @@ export default function Nav() {
              }}
              mt={2}
            >
-           <a href='https://github.com/evangordo' target="_blank" > <FaGithub color={'white'}size={21} /></a> 
+           <a href='https://github.com/evangordo' rel="noreferrer"  target="_blank" > <FaGithub color={'white'}size={21} /></a> 
            </Box>
          </motion.div>
          <motion.div
@@ -154,7 +144,7 @@ export default function Nav() {
              }}
              mt={2}
            >
-           <a href='https://www.linkedin.com/in/evan-gordo/'  target="_blank">  <FaLinkedinIn color={'white'} size={21} /></a>
+           <a href='https://www.linkedin.com/in/evan-gordo/'  rel="noreferrer"  target="_blank">  <FaLinkedinIn color={'white'} size={21} /></a>
            </Box>
          </motion.div>
 <Box p={2}>

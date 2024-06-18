@@ -1,4 +1,4 @@
-// mdxComponents.tsx
+import React from 'react'
 import { Code, Divider, Heading, Link, ListItem, OrderedList, Text, UnorderedList } from '@chakra-ui/layout';
 import { Image } from '@chakra-ui/image';
 import { Table, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/table';
