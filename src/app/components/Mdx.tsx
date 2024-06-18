@@ -1,7 +1,6 @@
 // mdxComponents.tsx
 import { Code, Divider, Heading, Link, ListItem, OrderedList, Text, UnorderedList } from '@chakra-ui/layout';
 import { Image } from '@chakra-ui/image';
-import { Checkbox } from '@chakra-ui/checkbox';
 import { Table, Tbody, Td, Th, Thead, Tr } from '@chakra-ui/table';
 import { MDXComponents } from 'mdx/types';
 
@@ -9,14 +8,6 @@ const mdxComponents: MDXComponents = {
   p: (props) => <Text mb={2} {...props} />,
   em: (props) => <Text as="em" {...props} />,
   blockquote: (props) => <Code as="blockquote" p={2} {...props} />,
-  code: (props) => {
-    const { inline, children, className } = props;
-    if (inline) {
-      return <Code p={2} className={className}>{children}</Code>;
-    }
-    return <Code className={className} whiteSpace="break-spaces" display="block" w="full" p={2}>{children}</Code>;
-  },
-  del: (props) => <Text as="del" {...props} />,
   hr: () => <Divider />,
   a: Link,
   img: (props) => <Image rounded="lg" {...props} />,

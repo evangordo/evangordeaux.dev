@@ -1,6 +1,6 @@
 // Post.js or Post.tsx
 import { MDXRemote } from 'next-mdx-remote/rsc';
-import mdxComponents from './Markdown';
+import mdxComponents from './Mdx';
 
 export function Post({ children }: { children: string }) {
   return (
