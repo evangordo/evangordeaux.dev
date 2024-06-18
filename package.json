@@ -19,7 +19,6 @@
     "@mdx-js/react": "^3.0.1",
     "@motionone/utils": "^10.18.0",
     "@next/mdx": "^14.2.3",
-    "@tailwindcss/typography": "^0.5.13",
     "@types/mdx": "^2.0.13",
     "chakra-ui-markdown-renderer": "^4.1.0",
     "framer-motion": "^11.2.10",

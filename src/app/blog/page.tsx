@@ -7,9 +7,9 @@ export default function page() {
   return (
     <Container mt={4}maxW={'3xl'}>
 <Heading mt={4}>All My Blogs</Heading>
-<SimpleGrid columns={[1,1,2]}>
+
 <GetAllBlogs/>
-</SimpleGrid>
+
 
     </Container>
   )

@@ -1,21 +1,27 @@
-import { getPosts } from "../lib/data";
+import { Container, SimpleGrid } from "@chakra-ui/react";
+import { getBlogs } from "../lib/data";
 import BlogCard from "./BlogCard";
 
 export default async function GetAllBlogs() {
-  const posts = await getPosts();
+  const blogs = await getBlogs();
 
   return (
     <div>
-      {posts
+        <Container mt={{base: 0, md:4}}maxW={'3xl'}>
+        <SimpleGrid gap={6} columns={[1,1,2]}>
+      {blogs
         .sort((a, b) =>
           new Date(b.date).getTime() - new Date(a.date).getTime())
-        .map((post) => (
-          <article key={post.slug}>
-            <a href={`/blog/${post.slug}`}>
-                <BlogCard title= {post.title} date= {post.date} description={post.description}/>
+        .map((blog) => (
+          <article key={blog.slug}>
+            <a href={`/blog/${blog.slug}`}>
+                <BlogCard title= {blog.title} date= { blog.date} description={blog.description}/>
             </a>
           </article>
         ))}
+        </SimpleGrid>
+        </Container>
     </div>
+    
   );
 }

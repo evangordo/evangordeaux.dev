@@ -101,7 +101,7 @@ export default function Footer() {
               }}
               mt={2}
             >
-              <FaXTwitter color={'white'} size={21} />
+            <a href='https://x.com/EvanGordon9343' target="_blank">  <FaXTwitter color={'white'} size={21} /></a>
             </Box>
           </motion.div>
           <motion.div
@@ -127,7 +127,7 @@ export default function Footer() {
               }}
               mt={2}
             >
-              <FaGithub color={'white'}size={21} />
+            <a href='https://github.com/evangordo' target="_blank" > <FaGithub color={'white'}size={21} /></a> 
             </Box>
           </motion.div>
           <motion.div
@@ -152,7 +152,7 @@ export default function Footer() {
               }}
               mt={2}
             >
-              <FaLinkedinIn color={'white'} size={21} />
+            <a href='https://www.linkedin.com/in/evan-gordo/'  target="_blank">  <FaLinkedinIn color={'white'} size={21} /></a>
             </Box>
           </motion.div>
         </Stack>

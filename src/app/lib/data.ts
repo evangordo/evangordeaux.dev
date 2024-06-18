@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import matter from "gray-matter";
 import path from "path";
 
-export type Post = {
+export type Blog = {
   title: string;
   slug: string;
   date: string;
@@ -10,23 +10,23 @@ export type Post = {
   body: string;
 };
 
-export async function getPosts() {
-  const posts = await fs.readdir("./posts/");
+export async function getBlogs() {
+  const blogs = await fs.readdir("./content/");
 
   return Promise.all(
-    posts
+    blogs
       .filter((file) => path.extname(file) === ".mdx")
       .map(async (file) => {
-        const filePath = `./posts/${file}`;
+        const filePath = `./content/${file}`;
         const fileContent = await fs.readFile(filePath, "utf8");
         const { data, content } = matter(fileContent);
 
-        return { ...data, body: content } as Post;
+        return { ...data, body: content } as Blog;
       })
   );
 }
 
-export async function getPost(slug: string) {
-  const posts = await getPosts();
-  return posts.find((post) => post.slug === slug);
+export async function getBlog(slug: string) {
+  const blogs = await getBlogs();
+  return blogs.find((blog) => blog.slug === slug);
 }

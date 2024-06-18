@@ -54,7 +54,7 @@ export default function About() {
               }
             />
             <Heading ml={5} mt={7} textAlign={'center'} fontSize={'xl'}>
-              I'm Evan, and welcome to my site
+              I'm Evan, and welcome to my site 👋
             </Heading>
           </Flex>
   
