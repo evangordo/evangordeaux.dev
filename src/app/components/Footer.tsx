@@ -6,16 +6,10 @@ import {
   Stack,
   Text,
   useColorModeValue,
-
 } from '@chakra-ui/react'
 
 import { FaXTwitter, FaGithub, FaLinkedinIn } from 'react-icons/fa6';
-
 import { motion } from 'framer-motion';
-
-
-
-
 
 export default function Footer() {
   return (

@@ -15,7 +15,7 @@ import {
   Divider
 } from '@chakra-ui/react';
 import {  MoonIcon, SunIcon } from '@chakra-ui/icons';
-import { HamburgerIcon, CloseIcon, AddIcon } from '@chakra-ui/icons'
+import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 
 import Link from 'next/link';
 
