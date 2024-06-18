@@ -1,13 +1,13 @@
+// Post.js or Post.tsx
 import { MDXRemote } from 'next-mdx-remote/rsc';
-import ChakraUIRenderer from './Markdown';
+import mdxComponents from './Markdown';
 
 export function Post({ children }: { children: string }) {
-  const components = ChakraUIRenderer();
   return (
     <MDXRemote
       source={children}
       options={{ mdxOptions: {} }}
-      components={components}
+      components={mdxComponents}
     />
   );
 }
