@@ -1,34 +1,21 @@
-// 'use client';
-// import React, { Suspense } from 'react';
-// // import { getBlogPosts } from '../lib/data';
-// import Link from 'next/link';
-// import BlogCard from './BlogCard';
+import { getPosts } from "../lib/data";
+import BlogCard from "./BlogCard";
 
+export default async function GetAllBlogs() {
+  const posts = await getPosts();
 
-
-// export function GetAllBlogs() {
-//   let allBlogs = getBlogPosts();
-//   console.log('getting blogs', allBlogs)
-
-//   return (
-//     <>
-
-//       {allBlogs.map((post: any) => (
-//           <Link
-//             key={post.slug}
-          
-//             href={`/blog/${post.slug}`}
-//           >
-       
-//               <Suspense fallback={<p>loading...</p>}>
-//                 <BlogCard title={post.metadata.title} description={post.metadata.description} date={post.metadata.date}/>
-
-              
-//               </Suspense>
-       
-//           </Link>
-//         ))}
-   
-//     </>
-//   );
-// }
+  return (
+    <div>
+      {posts
+        .sort((a, b) =>
+          new Date(b.date).getTime() - new Date(a.date).getTime())
+        .map((post) => (
+          <article key={post.slug}>
+            <a href={`/blog/${post.slug}`}>
+                <BlogCard title= {post.title} date= {post.date} description={post.description}/>
+            </a>
+          </article>
+        ))}
+    </div>
+  );
+}

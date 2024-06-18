@@ -1,22 +1,16 @@
-import { getPosts } from "../lib/data";
+import { Container, Heading, SimpleGrid } from "@chakra-ui/react";
 
-export default async function Page() {
-  const posts = await getPosts();
+import React from 'react'
+import GetAllBlogs from "../components/GetBlogs";
 
+export default function page() {
   return (
-    <div>
-      {posts
-        .sort((a, b) =>
-          new Date(b.date).getTime() - new Date(a.date).getTime())
-        .map((post) => (
-          <article key={post.slug}>
-            <a href={`/blog/${post.slug}`}>
-              <p>{post.date}</p>
-              <h1>{post.title}</h1>
-              <p>{post.description}</p>
-            </a>
-          </article>
-        ))}
-    </div>
-  );
+    <Container mt={4}maxW={'3xl'}>
+<Heading mt={4}>All My Blogs</Heading>
+<SimpleGrid columns={[1,1,2]}>
+<GetAllBlogs/>
+</SimpleGrid>
+
+    </Container>
+  )
 }

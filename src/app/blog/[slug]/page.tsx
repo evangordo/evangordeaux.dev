@@ -1,8 +1,7 @@
 import { getPost, getPosts } from "../../lib/data";
 import { Post } from "../../components/Post";
 import { notFound } from "next/navigation";
-import Link from "next/link";
-import { Container, Heading } from "@chakra-ui/react";
+import { Box, Container, Heading } from "@chakra-ui/react";
 
 export async function generateStaticParams() {
   const posts = await getPosts();
@@ -18,8 +17,10 @@ export default async function Page({ params }: {
   return (
     <>
     <Container mt={4} maxW={'3xl'}>
-      <Heading>{post.title}</Heading>
-      <Post>{post.body}</Post>
+      <Heading mt={4}>{post.title}</Heading>
+      <Box mt={4}>
+      <Post >{post.body}</Post>
+      </Box>
       </Container>
     </>
   
