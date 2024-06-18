@@ -1,6 +1,5 @@
 'use client';
 import {
-  Avatar,
   Box,
   Container,
   Heading,
@@ -54,12 +53,12 @@ export default function About() {
               }
             />
             <Heading ml={5} mt={7} textAlign={'center'} fontSize={'xl'}>
-              I'm Evan, and welcome to my site 👋
+              I&apos;m Evan, and welcome to my site 👋
             </Heading>
           </Flex>
   
           <Text mt={4} fontSize={'xl'}>
-            I'm a frontend developer. My expertise lies in <Kbd borderColor={'blue.400'}>React</Kbd>{' '}
+            I&apos;m a frontend developer. My expertise lies in <Kbd borderColor={'blue.400'}>React</Kbd>{' '}
             and <Kbd borderColor={'white'}>Next.js</Kbd>.
           </Text>
           <Text mt={4} fontSize={'xl'}>
