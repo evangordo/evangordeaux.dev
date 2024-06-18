@@ -1,3 +1,4 @@
+import React from "react";
 import { getBlog, getBlogs } from "../../lib/data";
 import { Post } from "../../components/Post";
 import { notFound } from "next/navigation";

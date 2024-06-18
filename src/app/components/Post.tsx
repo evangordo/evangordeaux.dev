@@ -1,4 +1,4 @@
-// Post.js or Post.tsx
+import React from 'react';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import mdxComponents from './Mdx';
 

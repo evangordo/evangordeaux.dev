@@ -1,4 +1,4 @@
-import { Container, Heading, SimpleGrid } from "@chakra-ui/react";
+import { Container, Heading } from "@chakra-ui/react";
 
 import React from 'react'
 import GetAllBlogs from "../components/GetBlogs";

@@ -1,10 +1,9 @@
 'use client'
-
+import React from 'react';
 import {
   Box,
   chakra,
   Container,
-  Divider,
   Stack,
   Text,
   useColorModeValue,

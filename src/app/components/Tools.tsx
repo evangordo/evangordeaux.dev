@@ -1,4 +1,5 @@
 'use client';
+import React from 'react';
 import {  Box, Tooltip, useBreakpointValue } from '@chakra-ui/react';
 import react from '../assets/react.png';
 import typescript from '../assets/typescript.png';

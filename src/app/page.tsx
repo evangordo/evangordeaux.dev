@@ -1,4 +1,3 @@
-import { Container, Grid, Heading, SimpleGrid } from '@chakra-ui/react';
 import About from './components/About';
 
 import GridBox from './components/Grid';

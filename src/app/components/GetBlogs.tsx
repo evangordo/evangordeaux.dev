@@ -1,3 +1,4 @@
+import React from "react";
 import { Container, SimpleGrid } from "@chakra-ui/react";
 import { getBlogs } from "../lib/data";
 import BlogCard from "./BlogCard";

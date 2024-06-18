@@ -31,7 +31,7 @@ bgGradient={[
 <Divider/>
 <Flex justifyContent={'space-between'}>
 <Heading m={2}fontSize={'2xl'} color={'white'}> Rakeoff labs</Heading>
-<Text m={2} color={'white'}>May '23 - April '24</Text>
+<Text m={2} color={'white'}>May &apos;23 - April &apos;24</Text>
 </Flex>
 <Text ml={2} color={'white'}>Co-founder & Frontend developer</Text>
 

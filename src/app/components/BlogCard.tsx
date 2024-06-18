@@ -6,9 +6,8 @@ import {
   Heading,
   Text,
   Stack,
-  Avatar,
   Flex,
-  useColorModeValue,
+
 } from '@chakra-ui/react';
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 
