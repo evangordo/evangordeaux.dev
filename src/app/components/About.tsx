@@ -5,16 +5,15 @@ import {
   Container,
   Heading,
   Stack,
-  Image,
+  
   Flex,
   Text,
   Kbd,
-  IconProps,
-  Icon,
-  useBreakpointValue,
-  useColorModeValue,
+ 
 } from '@chakra-ui/react';
+import Image from './Image';
 
+import profiler from '../assets/LinkedIn.png'
 import React from 'react';
 // const Blur = (props: IconProps) => {
 //     return (
@@ -48,8 +47,10 @@ export default function About() {
               objectFit={'cover'}
               boxSize={24}
               rounded={'full'}
+              
+              alt='profiler'
               src={
-                'https://mentorsclub.s3.eu-north-1.amazonaws.com/f39272a4-1dca-4d3f-a482-67b9e11b771e-profiler.png'
+                profiler
               }
             />
             <Heading ml={5} mt={7} textAlign={'center'} fontSize={'xl'}>
