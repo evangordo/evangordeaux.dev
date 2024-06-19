@@ -56,6 +56,7 @@ export default function Nav() {
          <IconButton
   bg='#1a202c '
             size={'md'}
+            color={'white'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label={'Open Menu'}
             display={{ md: 'none' }}
