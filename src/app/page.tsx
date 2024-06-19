@@ -16,7 +16,7 @@ export default function Home() {
       <About />
       <GridBox />
       <GetAllBlogs/>
-      <Footer />
+     <Footer/>
     </>
   );
 }

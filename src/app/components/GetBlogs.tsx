@@ -9,7 +9,7 @@ export default async function GetAllBlogs() {
   return (
     <div>
         <Container mt={{base: 0, md:4}}maxW={'3xl'}>
-        <SimpleGrid gap={6} columns={[1,1,2]}>
+        <SimpleGrid  columns={[1,1,2]}>
       {blogs
         .sort((a, b) =>
           new Date(b.date).getTime() - new Date(a.date).getTime())

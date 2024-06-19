@@ -8,40 +8,33 @@ import {
   Flex,
   Text,
   Kbd,
- 
+  useColorModeValue
 } from '@chakra-ui/react';
 import Image from './Image';
 
 import profiler from '../assets/LinkedIn.png'
 import React from 'react';
-// const Blur = (props: IconProps) => {
-//     return (
-//       <Icon
-//         width={useBreakpointValue({ base: '100%', md: '40vw', lg: '40vw' })}
-//         zIndex={useBreakpointValue({ base: -1, md: -1, lg: -1 })}
-//         height={{ base: '560px', lg: '400px' }}
-//         viewBox="0 0 528 560"
-//         fill="none"
-//         xmlns="http://www.w3.org/2000/svg"
-//         {...props}>
-//         <circle cx="1" cy="61" r="111" fill="#00BFFF" />
-//         <circle cx="1" cy="106" r="139" fill="#778899" />
-//         <circle cy="1" r="3" fill="#778899" />
-//         <circle cx="1.5" cy="189.5" r="101.5" fill="#778899" />
 
-//         <circle cx="70.5" cy="458.5" r="101.5" fill="#708090" />
-//         <circle cx="426.5" cy="-0.5" r="101.5" fill="#778899" />
-//       </Icon>
-//     )
-//   }
 
 export default function About() {
   return (
     <Container mt={5} maxW={'3xl'}>
       <Box position={'relative'}>
+      <Box zIndex="0" width={{base: '100%', md: "60%"}} position="absolute" height={{base: '35%', md: "40%"}}>
+            <Box
+              bgGradient={useColorModeValue(
+                'radial(blue.600 1px, transparent 1px)',
+                'radial(blue.300 1px, transparent 1px)',
+              )}
+              backgroundSize="20px 20px"
+              opacity="0.4"
+              height="100%"
+            />
+          </Box>
         <Stack>
-          <Flex>
+          <Flex zIndex="1">
             <Image
+           
          className='imgbg'
               objectFit={'cover'}
               boxSize={24}
@@ -53,7 +46,7 @@ export default function About() {
               }
             />
             <Heading ml={5} mt={7} textAlign={'center'} fontSize={'xl'}>
-              I&apos;m Evan, and welcome to my site 👋
+              I&apos;m Evan, welcome to my site 👋
             </Heading>
           </Flex>
   
