@@ -62,8 +62,8 @@ export default function GridBox() {
        
       ]}boxShadow='dark-lg'  borderWidth="5px"  borderRadius={'md'} height={'100%'}>
             <Box bg='#1a202c'  >
-            <Text color={'white'} p={1}>  Interested in working at startups of all fields, I like the dynamic environments. Outside of development, I&apos;m keen on
-         my sports & fitness.</Text>
+            <Text color={'white'} p={1}>Interested in working in AI, SaaS, or gaming startups. I like the dynamic environment - Outside of software, I&apos;m keen on
+          sports & fitness.</Text>
             <TitleCard m={1.5}title="More" />
             </Box>
           </Box>

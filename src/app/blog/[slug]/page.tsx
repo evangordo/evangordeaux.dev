@@ -19,8 +19,8 @@ export default async function Page({ params }: {
     <>
     <Container mt={4} maxW={'3xl'}>
       <Flex justifyContent={'space-between'}>
-      <Heading mt={4}>{blog.title}</Heading>
-      <Text mt={6}>{blog.date}</Text>
+      <Heading fontSize={'5xl'}mt={4}>{blog.title}</Heading>
+      <Text fontSize={'xl'}color={'grey'}m={8}>{blog.date}</Text>
       </Flex>
       <Box mt={4}>
       <Post >{blog.body}</Post>
